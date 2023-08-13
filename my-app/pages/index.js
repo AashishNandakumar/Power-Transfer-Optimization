@@ -76,62 +76,102 @@ export default function Home() {
     return (
       <>
         <section className={styles.Content1Section}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean et
-          tortor at risus viverra. Tortor condimentum lacinia quis vel eros
-          donec ac. Nunc eget lorem dolor sed. Aenean sed adipiscing diam donec
-          adipiscing. Massa sapien faucibus et molestie ac. Lacus vestibulum sed
-          arcu non odio euismod. Sociis natoque penatibus et magnis dis
-          parturient. Nec tincidunt praesent semper feugiat. Sed vulputate odio
-          ut enim. Justo nec ultrices dui sapien eget mi proin. Dignissim enim
-          sit amet venenatis. In eu mi bibendum neque egestas congue quisque
-          egestas diam. Sem fringilla ut morbi tincidunt augue interdum. Feugiat
-          nisl pretium fusce id velit ut tortor pretium viverra. Velit egestas
-          dui id ornare arcu odio. Etiam dignissim diam quis enim lobortis
-          scelerisque fermentum dui faucibus. Accumsan tortor posuere ac ut
-          consequat. Sed felis eget velit aliquet sagittis id consectetur purus.
-          Velit egestas dui id ornare arcu odio ut sem nulla. Ornare lectus sit
-          amet est. Volutpat est velit egestas dui. Aenean et tortor at risus.
-          Felis imperdiet proin fermentum leo vel orci porta. Posuere
-          sollicitudin aliquam ultrices sagittis orci a scelerisque. Gravida cum
-          sociis natoque penatibus et. Dictum varius duis at consectetur lorem.
-          Orci dapibus ultrices in iaculis nunc sed augue lacus viverra. Aliquam
-          vestibulum morbi blandit cursus risus at ultrices. Quam id leo in
-          vitae turpis massa sed elementum. Mi proin sed libero enim sed
-          faucibus turpis. Sit amet consectetur adipiscing elit ut aliquam
-          purus. Proin sed libero enim sed faucibus turpis in eu mi. Molestie a
-          iaculis at erat. Pellentesque pulvinar pellentesque habitant morbi
-          tristique senectus. Natoque penatibus et magnis dis parturient.
-          Pulvinar proin gravida hendrerit lectus a. Ultrices neque ornare
-          aenean euismod elementum nisi quis. Pharetra massa massa ultricies mi
-          quis hendrerit. Nec feugiat nisl pretium fusce id velit. Enim ut sem
-          viverra aliquet eget. Parturient montes nascetur ridiculus mus mauris
-          vitae ultricies. Amet justo donec enim diam vulputate ut pharetra sit
-          amet. Cursus eget nunc scelerisque viverra mauris in. In dictum non
-          consectetur a erat. Sem fringilla ut morbi tincidunt augue interdum.
-          Facilisi cras fermentum odio eu feugiat. Mollis aliquam ut porttitor
-          leo a diam sollicitudin tempor. Proin libero nunc consequat interdum
-          varius sit amet mattis vulputate. Ullamcorper morbi tincidunt ornare
-          massa. Sagittis vitae et leo duis ut diam quam nulla porttitor. Ac
-          tortor dignissim convallis aenean. A cras semper auctor neque vitae
-          tempus quam pellentesque. Mollis aliquam ut porttitor leo a diam
-          sollicitudin tempor id. Id ornare arcu odio ut sem nulla. Ultrices
-          neque ornare aenean euismod. Eu sem integer vitae justo eget magna.
-          Integer eget aliquet nibh praesent tristique. Quam quisque id diam vel
-          quam. Velit ut tortor pretium viverra suspendisse potenti. Mauris a
-          diam maecenas sed. Eu volutpat odio facilisis mauris sit amet. Varius
-          vel pharetra vel turpis nunc eget lorem dolor. Sed vulputate odio ut
-          enim blandit volutpat maecenas volutpat blandit. Consequat id porta
-          nibh venenatis cras sed felis. Posuere morbi leo urna molestie at
-          elementum eu. Imperdiet sed euismod nisi porta. Et malesuada fames ac
-          turpis egestas maecenas pharetra. Et tortor at risus viverra. Sagittis
-          vitae et leo duis ut diam quam nulla. Feugiat nibh sed pulvinar proin
-          gravida. Malesuada fames ac turpis egestas maecenas pharetra.
-          Condimentum mattis pellentesque id nibh tortor.
+          <h2>CREATORS</h2>
+          <div className={styles.Content1Biography}>
+            <div className={styles.Content1BiographyImg}>
+              <div>
+                <img
+                  src="https://web.math.muni.cz/biografie/obrazky/jarnik_vojtech.jpg"
+                  height="270px"
+                  width="230px"
+                />
+                <p>Vojtěch Jarník</p>
+              </div>
+              <div>
+                <img
+                  src="https://alchetron.com/cdn/robert-c-prim-42e4d0d2-0d77-4afa-8cf2-a4b387b4de5-resize-750.jpeg"
+                  height="270px"
+                  width="230px"
+                />
+                <p>Robert C. Prim</p>
+              </div>
+              <div>
+                <img
+                  src="https://cacm.acm.org/system/assets/0000/3432/072010_CACMpg41_An-Interview.large.jpg?1476779421&1279552189"
+                  height="270px"
+                  width="230px"
+                />
+                <p>Edsger W. Dijkstra</p>
+              </div>
+            </div>
+            <div className={styles.Content1BiographyInfo}>
+              <p>
+                The algorithm was created by Czech mathematician{" "}
+                <strong>Vojtch Jarnk</strong> in 1930. Later, computer
+                scientists <strong>Robert C. Prim </strong>and{" "}
+                <strong>Edsger W. Dijkstra</strong> rediscovered and republished
+                the algorithm in 1957 and 1959, respectively. As a result, it is
+                also known as the DJP algorithm, Prim-Jarnak algorithm,
+                Prim-Dijkstra algorithm, and Jarnak's algorithm.
+              </p>
+              <br />
+              <p>
+                Prim's method, often referred to as{" "}
+                <strong>Jarnk's algorithm</strong> in computer science, is a
+                greedy algorithm that locates a minimum spanning tree for a
+                weighted undirected graph. The overall weight of all the edges
+                in the tree is reduced, and as a result, it discovers a subset
+                of the edges that creates a tree with every vertex. The
+                algorithm builds this tree one vertex at a time, from any
+                beginning vertex, adding the cheapest connection from the tree
+                to the next vertex at each step.
+              </p>
+            </div>
+          </div>
         </section>
       </>
     );
   };
+
+  const Content2 = () => {
+    return (
+      <>
+        <section className={styles.AlgorithmSection}>
+          <h2>Prims Algorithm</h2>
+          <div className={styles.AlgorithmSectionContain}>
+            <div className={styles.AlgorithmSectionVisual}>
+              <img src="https://upload.wikimedia.org/wikipedia/en/9/96/Prim-animation.gif" />
+            </div>
+            <div className={styles.AlgorithmSectionAlgo}>
+              <pre>
+                {`
+    ALGORITHM Prim(G){
+    // Prim's algorithm for constructing a minimum spanning tree 
+    // Input: A weighted connected graph G = (V, E) where V is vertex 
+              and E is edge
+    // Output: ET, the set of edges composing a minimum spanning tree of 
+               G 
+      
+    Vt <- {V0}
+    VT <- // the set of tree vertices can be initialized with any vertex 
+    Et <- phi(empty set)
+      
+    for i <- 1 to V - 1 do
+      find a minimum-weight edge e* = (v*, u*) among all the edges (v, u)
+      such that v is in VT and u is in V - VT
+        
+      Vt <- Vt U {u*}
+      Et <- Et U {v*}
+    }
+    `}
+              </pre>
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  };
+
   const Footer = () => {
     return (
       <>
@@ -178,6 +218,22 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <main className={styles.body}>
         <div className={styles.banner}>
@@ -197,6 +253,7 @@ export default function Home() {
 
         <Navbar />
         <Content1 />
+        <Content2 />
         <Footer />
       </main>
     </>

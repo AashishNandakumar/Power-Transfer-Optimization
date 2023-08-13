@@ -41,8 +41,8 @@
 
 .banner {
   text-align: center;
-  background-color: #e63946;
-  color: #f1faee;
+  background-color: #ff7d00;
+  color: #14213d;
   height: 1.3rem;
   letter-spacing: 0.1rem;
   /* position: fixed; */
@@ -63,8 +63,8 @@
 .navbar {
   display: flex;
   height: 4.5rem;
-  background-color: #1d3557;
-  color: #f1faee;
+  background-color: #003049;
+  color: #fdf0d5;
   white-space: nowrap;
   width: 100%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -152,9 +152,13 @@
   /* height: 100px; */
   height: 20rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #05091b;
+  background-color: #7a9caf;
+  background-color: #003049;
+
+  color: #fdf0d5;
   max-height: 25rem;
-  border-bottom: 2px solid white;
+  min-height: 20rem;
+  /* border-bottom: 2px solid white; */
 }
 
 .FooterDiv1 {
@@ -182,7 +186,7 @@
 
 .FooterDesc h2 {
   font-size: xx-large;
-  color: #F3F3F4;
+  color: #fdf0d5;
 
   text-align: left;
   position: relative;
@@ -204,7 +208,7 @@
   text-align: left;
   position: relative;
   top: 3rem;
-  color: #F3F3F4;
+  color: #fdf0d5;
 
   /* margin-bottom: -1%; */
   letter-spacing: 0.15rem;
@@ -234,7 +238,7 @@
   text-align: left;
   position: relative;
   top: 3rem;
-  color: #F3F3F4;
+  color: #fdf0d5;
   /* margin-bottom: -1%; */
   letter-spacing: 0.15rem;
 }
@@ -272,7 +276,7 @@
   font-size: medium;
   letter-spacing: 0.15rem;
 
-  color: #F3F3F4;
+  color: #fdf0d5;
 
 }
 
@@ -283,5 +287,98 @@
 /* CONTENT-1 */
 
 .Content1Section {
+  font-family: 'Poppins', sans-serif;
+  min-height: 110vh;
+  /* margin: 2rem 0; */
+  color: #001524;
+  background-color: #b7e4c7;
+}
+
+.Content1Section h2 {
+  text-align: center;
+  /* margin-top: 1em; */
+  padding: 1.2em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.1em;
+  color: #78290f;
+}
+
+.Content1Section .Content1Biography {
+  /* margin-top: 1.5em; */
+
+  display: flex;
+  flex-direction: column;
+  /* border: 3px solid black */
+}
+
+.Content1Section .Content1BiographyImg {
+  /* border: 1px solid white; */
+  padding: 0 8em;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.Content1BiographyImg img {
+  transition: 0.9s;
+}
+
+.Content1BiographyImg img:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.Content1Section .Content1BiographyInfo {
+  margin-top: 1em;
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  padding: 1em 8em;
+}
+
+
+
+/* content-2 begins */
+.AlgorithmSection {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  background-color: #52b69a;
+
+}
+
+.AlgorithmSection h2 {
+  text-align: center;
+  margin-top: 1em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.1em;
+  color: #78290f;
+
+}
+
+.AlgorithmSectionContain {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+
+}
+
+.AlgorithmSectionVisual {
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.AlgorithmSectionAlgo {
+  border-left: 2px solid black;
+  flex: 1;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  font-size: medium;
 }
