@@ -330,8 +330,8 @@
 
 .Content1Section .Content1BiographyInfo {
   margin-top: 1em;
-  font-family: 'Ubuntu', sans-serif;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif; */
   font-family: 'Rubik', sans-serif;
   line-height: 1.5;
   text-align: center;
@@ -381,4 +381,44 @@
   font-family: 'Fira Code', monospace;
   line-height: 1.5;
   font-size: medium;
+}
+
+/* CONTENT-3 */
+.ProblemSection {
+  min-height: 100vh;
+}
+
+.ProblemSectionContain {
+  border: 3px solid black;
+  padding: 2.2em;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.3;
+
+}
+
+.ProblemSection .ProblemSectionh2 {
+  margin-top: 1em;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.ProblemSectionh3 {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.ProblemSectionh4 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.1em;
+
+}
+
+.ProblemSection p:nth-of-type(1) {
+  text-align: center;
 }
