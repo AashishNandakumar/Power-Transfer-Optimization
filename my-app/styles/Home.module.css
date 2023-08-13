@@ -1,5 +1,6 @@
 .body {
-  background-color: rgb(151, 180, 33);
+  background-color: #f1faee;
+
   /* min-height: 90vh; */
   z-index: 1;
   /* display: unset; */
@@ -290,8 +291,8 @@
   font-family: 'Poppins', sans-serif;
   min-height: 110vh;
   /* margin: 2rem 0; */
-  color: #001524;
-  background-color: #b7e4c7;
+  background-color: #f1faee;
+  color: #1d3557;
 }
 
 .Content1Section h2 {
@@ -300,7 +301,7 @@
   padding: 1.2em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 0.1em;
-  color: #78290f;
+  color: #e63946;
 }
 
 .Content1Section .Content1Biography {
@@ -349,6 +350,9 @@
   align-items: center; */
   background-color: #52b69a;
 
+  background-color: #f1faee;
+  color: #1d3557;
+
 }
 
 .AlgorithmSection h2 {
@@ -356,7 +360,7 @@
   margin-top: 1em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 0.1em;
-  color: #78290f;
+  color: #e63946;
 
 }
 
@@ -386,21 +390,25 @@
 /* CONTENT-3 */
 .ProblemSection {
   min-height: 100vh;
+  background-color: #f1faee;
+  color: #1d3557;
 }
 
 .ProblemSectionContain {
-  border: 3px solid black;
-  padding: 2.2em;
+  /* border: 3px solid black; */
+  padding: 5em;
   font-family: 'Raleway', sans-serif;
   line-height: 1.3;
 
 }
 
 .ProblemSection .ProblemSectionh2 {
-  margin-top: 1em;
+  /* margin-top: 0.1em; */
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 0.1em;
+  color: #e63946;
+
 }
 
 .ProblemSectionh3 {
@@ -409,6 +417,7 @@
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 0.1em;
+  color: #1d3557
 }
 
 .ProblemSectionh4 {
@@ -421,4 +430,16 @@
 
 .ProblemSection p:nth-of-type(1) {
   text-align: center;
+}
+
+.ProblemSectionli {
+  margin-bottom: 0.8em;
+  /* padding: 10px; */
+}
+
+.HR {
+  width: 95%;
+  margin: 0 auto;
+  border: none;
+  border-top: 2px solid black;
 }
