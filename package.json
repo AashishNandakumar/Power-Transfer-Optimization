@@ -1,0 +1,11 @@
+{
+  "name": "power-transfer-optimization",
+  "version": "1.0.0",
+  "description": "power transfer optimization using Prims's algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aashish Nandakumar, RNSIT",
+  "license": "ISC"
+}
