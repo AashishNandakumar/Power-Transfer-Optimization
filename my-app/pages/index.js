@@ -202,7 +202,6 @@ export default function Home() {
               the following objectives:
             </p>
             <br />
-
             <ol>
               <li className={styles.ProblemSectionli}>
                 <strong>Graph Representation:</strong> Create a comprehensive
@@ -240,6 +239,61 @@ export default function Home() {
                 geographic constraints, and cost-effectiveness.
               </li>
             </ol>
+            <br />
+            <h4 className={styles.ProblemSectionh4}>
+              Project Focus: Optimizing 400Kv Lines Using Prim's Algorithm{" "}
+            </h4>
+            <p>
+              As part of the broader endeavor to optimize the power grid
+              infrastructure in Karnataka, this project places a{" "}
+              <strong>
+                {" "}
+                specific emphasis on the efficient utilization of 400Kv
+                transmission lines.
+              </strong>
+              The intricate network of these high-voltage lines serves as the
+              backbone of energy transmission across the state. Our challenge
+              involves implementing Prim's algorithm to identify the optimal
+              connections and routes among these 400Kv lines, ensuring the
+              establishment of a Minimum Spanning Tree (MST) that minimizes
+              transmission costs while maximizing the reliability of energy
+              distribution. By focusing on these critical 400Kv lines, Our
+              project aims to uncover opportunities for{" "}
+              <strong>
+                {" "}
+                enhanced load balancing, reduced energy loss, and heightened
+                resilience within the power grid network.
+              </strong>{" "}
+              The culmination of this effort will not only shed light on the
+              potential benefits of a refined 400Kv transmission system but also
+              contribute significantly to the holistic understanding of power
+              grid optimization strategies.
+            </p>
+            <br />
+            <h3 className={styles.ProblemSectionh3}>
+              Existing Power Grid Of Karnataka
+            </h3>
+            <div className={styles.ProblemSectionBeforeImg}>
+              {/* Including a PDF using Iframe */}
+              <iframe src="karGrid1.pdf" width="100%" height="1200px">
+                <p>
+                  Your browser does not support PDF embedding. You can{" "}
+                  <a href="karGrid1.pdf">click here to download the PDF file</a>
+                  .
+                </p>
+              </iframe>
+            </div>
+            <br />
+            <p align="center">
+              Here the pink lines indicates the 400Kv transmission lines, which
+              we will be using to create a Minimum Spanning Tree.
+            </p>
+            <br />
+            <br />
+            <h3 className={styles.ProblemSectionh3}>
+              Generating a Minimum Cost Spanning Tree
+            </h3>
+            {/* Use backend here */}
           </div>
         </section>
       </>
@@ -252,7 +306,10 @@ export default function Home() {
         <section className={styles.FooterSec}>
           <div className={styles.FooterDiv1}>
             <div className={styles.FooterDesc}>
-              <h2>Intelligent Solutions.</h2>
+              <h2>
+                Intelligent Solutions,
+                <br /> For a better tomorrow.
+              </h2>
             </div>
             <div className={styles.FooterAddress}>
               <h3>Address</h3>

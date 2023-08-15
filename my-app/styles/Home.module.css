@@ -289,7 +289,7 @@
 
 .Content1Section {
   font-family: 'Poppins', sans-serif;
-  min-height: 110vh;
+  min-height: 90vh;
   /* margin: 2rem 0; */
   background-color: #f1faee;
   color: #1d3557;
@@ -343,7 +343,7 @@
 
 /* content-2 begins */
 .AlgorithmSection {
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   /* justify-content: center;
@@ -389,7 +389,7 @@
 
 /* CONTENT-3 */
 .ProblemSection {
-  min-height: 100vh;
+  min-height: 140vh;
   background-color: #f1faee;
   color: #1d3557;
 }
@@ -435,6 +435,13 @@
 .ProblemSectionli {
   margin-bottom: 0.8em;
   /* padding: 10px; */
+}
+
+.ProblemSectionBeforeImg {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  margin: 0 auto;
 }
 
 .HR {
