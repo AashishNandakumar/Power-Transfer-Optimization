@@ -3,9 +3,16 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Link } from "react-scroll";
+import { prims } from "./components/primsAlgo.mjs";
+import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  useEffect(() => {
+    const res = prims();
+    console.log(res);
+  }, []);
+
   const Navbar = () => {
     return (
       <>
@@ -276,11 +283,11 @@ export default function Home() {
             <div className={styles.ProblemSectionBeforeImg}>
               {/* Including a PDF using Iframe */}
               <iframe src="karGrid1.pdf" width="100%" height="1200px">
-                <p>
+                {/* <p>
                   Your browser does not support PDF embedding. You can{" "}
                   <a href="karGrid1.pdf">click here to download the PDF file</a>
                   .
-                </p>
+                </p> */}
               </iframe>
             </div>
             <br />
