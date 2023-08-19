@@ -1,38 +1,40 @@
+// onClient
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Link } from "react-scroll";
-import { prims } from "./components/primsAlgo.mjs";
 import { useEffect, useState } from "react";
-const inter = Inter({ subsets: ["latin"] });
+import dynamic from "next/dynamic.js";
+// import { Section4 } from "./components/map.js";
+// const NoSSRLeafletComponents = dynamic(() => import("react-leaflet"), {
+//   ssr: false, // Disable SSR for the entire react-leaflet package
+// });
+
+import { Section4 } from "./components/map.js";
 
 export default function Home() {
-  const [spanningTree, setSpanningTree] = useState([]);
-  const [latLong, setLatLong] = useState([]);
-
-  useEffect(() => {
-    fetch("./api/spanningTreeAPI")
-      .then((response) => {
-        console.log("Response: ", response);
-        response.json();
-      })
-      .then((data) => {
-        console.log("Spanning tree: ", data);
-        setSpanningTree(data);
-      })
-      .catch((error) => console.error("Error fetching spanning tree: ", error));
-
-    // fetch("./components/longLat.json")
-    //   .then((response) => response.json())
-    //   .then((data) => setLatLong(data))
-    //   .catch((error) =>
-    //     console.error("Error fetching Latitude and Longitude data: ", error)
-    //   );
-
-    console.log(spanningTree);
-    console.log(latLong);
-  }, []);
+  // useEffect(() => {
+  //   fetch("./api/spanningTreeAPI")
+  //     .then((response) => {
+  //       console.log("Response: ", response);
+  //       response.json();
+  //     })
+  //     .then((data) => {
+  //       console.log("Spanning tree: ", data);
+  //       setSpanningTree(data);
+  //     })
+  //     .catch((error) => console.error("Error fetching spanning tree: ", error));
+  //   fetch("./components/longLat.json")
+  //     .then((response) => response.json())
+  //     .then((data) => setLatLong(data))
+  //     .catch((error) =>
+  //       console.error("Error fetching Latitude and Longitude data: ", error)
+  //     );
+  //   setSpanningTree(obj1);
+  //   setLatLong(obj2);
+  //   console.log("Spanning tree: ", minCostSpanningTree);
+  //   console.log("LatLong: ", latitudeLongitude);
+  // }, []);
 
   const Navbar = () => {
     return (
@@ -328,8 +330,6 @@ export default function Home() {
     );
   };
 
-  const Section4 = () => {};
-
   const Footer = () => {
     return (
       <>
@@ -424,6 +424,8 @@ export default function Home() {
         <hr className={styles.HR} />
 
         <Content3 />
+        <Section4 />
+
         <Footer />
       </main>
     </>
