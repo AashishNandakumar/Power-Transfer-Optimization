@@ -1,12 +1,18 @@
-import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  Polyline,
+} from "react-leaflet";
+// import NoSSRLeafletComponents from "react-leaflet";
 
-const NoSSRLeafletComponents = dynamic(() => import("react-leaflet"), {
-  ssr: false,
-});
+// const NoSSRLeafletComponents = dynamic(() => import("react-leaflet"), {
+//   ssr: false,
+// });
 
-export const Section4 = () => {
+function Section4() {
   const [visibleVertices, setVisibleVertices] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const minCostSpanningTree = {
@@ -299,6 +305,9 @@ export const Section4 = () => {
         const v1Data = latitudeLongitude.find((item) => item.id === vertex.v1);
         const v2Data = latitudeLongitude.find((item) => item.id === vertex.v2);
 
+        // console.log(latitudeLongitude);
+        // console.log(minCostSpanningTree);
+
         if (v1Data && v2Data) {
           setVisibleVertices((prevState) => [
             ...prevState,
@@ -318,27 +327,30 @@ export const Section4 = () => {
         clearInterval(timer);
       }
     }, 2000);
-
-    // s
   }, [currentIndex]);
 
   return (
-    <NoSSRLeafletComponents.MapContainer center={[51.505, -0.09]} zoom={6}>
-      <NoSSRLeafletComponents.TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' />
+    <MapContainer
+      center={[38.907132, -77.036546]}
+      width="800"
+      height="400"
+      zoom={12}
+    >
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      />
 
       {/* Add Markers for each vertex */}
       {visibleVertices.map((vertex, index) => (
-        <NoSSRLeafletComponents.Marker
-          key={index}
-          position={[vertex.lat1, vertex.long1]}
-        >
-          <NoSSRLeafletComponents.Popup>{`Vertex ${vertex.v1} - Vertex ${vertex.v2}, Weight: ${vertex.weight}`}</NoSSRLeafletComponents.Popup>
-        </NoSSRLeafletComponents.Marker>
+        <Marker key={index} position={[vertex.lat1, vertex.long1]}>
+          <Popup>{`Vertex ${vertex.v1} - Vertex ${vertex.v2}, Weight: ${vertex.weight}`}</Popup>
+        </Marker>
       ))}
 
       {/* Add Polyline connecting vertices */}
       {visibleVertices.map((vertex, index) => (
-        <NoSSRLeafletComponents.Polyline
+        <Polyline
           key={index}
           positions={[
             [vertex.lat1, vertex.long1],
@@ -347,6 +359,8 @@ export const Section4 = () => {
           color="blue"
         />
       ))}
-    </NoSSRLeafletComponents.MapContainer>
+    </MapContainer>
   );
-};
+}
+
+export default Section4;

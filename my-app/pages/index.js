@@ -1,41 +1,13 @@
-// onClient
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Link } from "react-scroll";
-import { useEffect, useState } from "react";
-import dynamic from "next/dynamic.js";
-// import { Section4 } from "./components/map.js";
-// const NoSSRLeafletComponents = dynamic(() => import("react-leaflet"), {
-//   ssr: false, // Disable SSR for the entire react-leaflet package
-// });
+import dynamic from "next/dynamic";
 
-import { Section4 } from "./components/map.js";
+const Section4 = dynamic(() => import("../components/map.js"), {
+  ssr: false,
+});
 
 export default function Home() {
-  // useEffect(() => {
-  //   fetch("./api/spanningTreeAPI")
-  //     .then((response) => {
-  //       console.log("Response: ", response);
-  //       response.json();
-  //     })
-  //     .then((data) => {
-  //       console.log("Spanning tree: ", data);
-  //       setSpanningTree(data);
-  //     })
-  //     .catch((error) => console.error("Error fetching spanning tree: ", error));
-  //   fetch("./components/longLat.json")
-  //     .then((response) => response.json())
-  //     .then((data) => setLatLong(data))
-  //     .catch((error) =>
-  //       console.error("Error fetching Latitude and Longitude data: ", error)
-  //     );
-  //   setSpanningTree(obj1);
-  //   setLatLong(obj2);
-  //   console.log("Spanning tree: ", minCostSpanningTree);
-  //   console.log("LatLong: ", latitudeLongitude);
-  // }, []);
-
   const Navbar = () => {
     return (
       <>
@@ -372,6 +344,7 @@ export default function Home() {
         <meta name="description" content="Power Transfer Optimization" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
           rel="stylesheet"
@@ -424,8 +397,7 @@ export default function Home() {
         <hr className={styles.HR} />
 
         <Content3 />
-        <Section4 />
-
+        <div className={styles.SolutionSection}>{/* <Section4 /> */}</div>
         <Footer />
       </main>
     </>

@@ -450,3 +450,12 @@
   border: none;
   border-top: 2px solid black;
 }
+
+.SolutionSection {
+  margin-bottom: 6em;
+  min-height: 110vh;
+  width: 100%;
+  max-height: 120vh;
+
+  border: 2px solid black
+}
