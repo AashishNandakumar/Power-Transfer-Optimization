@@ -17,7 +17,7 @@ export default function Home() {
             <div className={styles.navBarLeftSub}>
               {/* <img src="" alt="Logo"></img> */}
               <a href="" target="_top">
-                PRIMS
+                <span className={styles.PRIMS}>NOIRE</span>
               </a>
             </div>
           </div>
@@ -78,7 +78,9 @@ export default function Home() {
     return (
       <>
         <section className={styles.Content1Section} id="INTRO">
-          <h2>CREATORS</h2>
+          <h2>
+            <span className={styles.Content1SectionHeader}>CREATORS</span>
+          </h2>
           <div className={styles.Content1Biography}>
             <div className={styles.Content1BiographyImg}>
               <div>
@@ -129,6 +131,11 @@ export default function Home() {
                 to the next vertex at each step.
               </p>
             </div>
+            <button className={styles.Content1Button}>
+              <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm#:~:text=The%20algorithm%20was%20developed%20in,in%201957%20and%20Edsger%20W.">
+                Read More
+              </a>
+            </button>
           </div>
         </section>
       </>
@@ -139,7 +146,12 @@ export default function Home() {
     return (
       <>
         <section className={styles.AlgorithmSection} id="ALGORITHM">
-          <h2>PRIMS ALGORITHM</h2>
+          <h2>
+            {" "}
+            <span className={styles.Content1SectionHeader}>
+              PRIMS ALGORITHM
+            </span>
+          </h2>
           <div className={styles.AlgorithmSectionContain}>
             <div className={styles.AlgorithmSectionVisual}>
               <img src="https://upload.wikimedia.org/wikipedia/en/9/96/Prim-animation.gif" />
@@ -179,7 +191,11 @@ export default function Home() {
       <>
         <section className={styles.ProblemSection} id="PROBLEM">
           <div className={styles.ProblemSectionContain}>
-            <h2 className={styles.ProblemSectionh2}>PROBLEM STATEMENT</h2>
+            <h2 className={styles.ProblemSectionh2}>
+              <span className={styles.Content1SectionHeader}>
+                PROBLEM STATEMENT
+              </span>
+            </h2>
             <h3 className={styles.ProblemSectionh3}>
               Optimizing Power Grid Infrastructure for Efficient Energy
               Distribution
@@ -287,8 +303,9 @@ export default function Home() {
             </div>
             <br />
             <p align="center">
-              Here the pink lines indicates the 400Kv transmission lines, which
-              we will be using to create a Minimum Spanning Tree.
+              Here the{" "}
+              <strong>pink lines indicates the 400Kv transmission lines</strong>
+              , which we will be using to create a Minimum Spanning Tree.
             </p>
             <br />
             <br />
@@ -337,6 +354,30 @@ export default function Home() {
     );
   };
 
+  const IntroPage = () => {
+    return (
+      <>
+        <section className={styles.IntroPage}>
+          <div className={styles.IntroPageDivImg}></div>
+          <div className={styles.IntroPageDiv}>
+            {/* <img
+              src="https://wordpress.iqonic.design/product/wp/xamin-elementor/wp-content/uploads/2020/06/bannershap.png"
+              className={styles.IntroImg}
+            /> */}
+            <div className={styles.IntroPageHeaders}>
+              <div className={styles.IntroPageHeadersItem1}>
+                <p>PRIMS</p>
+              </div>
+              <div className={styles.IntroPageHeadersItem2}>
+                <p>ALGORITHM</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  };
+
   return (
     <>
       <Head>
@@ -344,7 +385,10 @@ export default function Home() {
         <meta name="description" content="Power Transfer Optimization" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+          rel="stylesheet"
+        ></link>
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
           rel="stylesheet"
@@ -376,7 +420,27 @@ export default function Home() {
       </Head>
       <main className={styles.body}>
         <div className={styles.banner}>
-          <p>Under Development!</p>
+          <div className={styles.banner1}>
+            <div className={styles.banner11}>
+              <img
+                src="https://www.svgrepo.com/show/127575/location-sign.svg"
+                width="20px"
+              />
+              {"    "}
+              Bangalore
+            </div>
+            <div className={styles.banner12}>
+              {" "}
+              <img
+                src="https://img.icons8.com/?size=512&id=12623&format=png"
+                width="20px"
+              />{" "}
+              &nbsp;aashishnkumar@gmail.com
+            </div>
+          </div>
+          <div className={styles.banner2}>
+            <p className={styles.banner21}>AashishNandakumar</p>
+          </div>
         </div>
         <Link
           id={styles.anchor}
@@ -391,6 +455,7 @@ export default function Home() {
         </Link>
 
         <Navbar />
+        <IntroPage />
         <Content1 />
         <hr className={styles.HR} />
         <Content2 />

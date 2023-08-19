@@ -1,5 +1,5 @@
 .body {
-  background-color: #f1faee;
+  background-color: #fff;
 
   /* min-height: 90vh; */
   z-index: 1;
@@ -20,13 +20,14 @@
 
 #upBtn {
   text-align: center;
+  /* padding: 20px; */
   font-size: x-large;
   font-weight: 900;
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
-  background-color: #dddf00;
-  color: rgb(0, 0, 0);
+  /* border-radius: 50%; */
+  background-color: #437EEB;
+  color: #FFFFFF;
   border: none;
   cursor: pointer;
   z-index: 3;
@@ -36,15 +37,16 @@
 }
 
 #upBtn:hover {
-  background-color: #9da003;
+  background-color: #214fa3;
 
 }
 
 .banner {
   text-align: center;
-  background-color: #ff7d00;
+  /* background-color: #ff7d00; */
+  /* border: 2px solid; */
   color: #14213d;
-  height: 1.3rem;
+  height: 2.0rem;
   letter-spacing: 0.1rem;
   /* position: fixed; */
   top: 0;
@@ -59,21 +61,68 @@
   z-index: 2;
 }
 
+.banner1 {
+  background-color: #437EEA;
+  color: #FFFFFF;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.banner11, .banner12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.0rem;
+  font-size: small;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #F8F8FD;
+  color: #437EEA;
+  border-bottom: 2px solid #E4E8FF;
+
+}
+
+.banner21 {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid; */
+  height: 2.0rem;
+  font-size: small;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 1000;
+  border: none;
+}
+
 
 /* NAVBAR BEIGNS */
 .navbar {
   display: flex;
-  height: 4.5rem;
-  background-color: #003049;
-  color: #fdf0d5;
+  height: 3.5rem;
+  background-color: #F9F9FE;
+  color: #535F81;
   white-space: nowrap;
   width: 100%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+  font-size: x-small;
   /* align-self: flex-start;
   height: auto; */
   opacity: 0.9;
+  /* border-bottom: 1px solid #4C5870;
+  border-top: 1px solid #4C5870; */
 
+
+}
+
+.PRIMS {
+  font-size: medium;
+  color: #3A4662
 }
 
 /* .fakeNavSpace {
@@ -106,7 +155,7 @@
   letter-spacing: 0.1rem;
   transition: 1s;
 
-  background-image: linear-gradient(to right, #ffffff, #ffffff);
+  background-image: linear-gradient(to right, #535F81, #535F81);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
@@ -153,10 +202,9 @@
   /* height: 100px; */
   height: 20rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #7a9caf;
-  background-color: #003049;
+  background-color: #EEF1FE;
 
-  color: #fdf0d5;
+  color: #5A647E;
   max-height: 25rem;
   min-height: 20rem;
   /* border-bottom: 2px solid white; */
@@ -187,7 +235,7 @@
 
 .FooterDesc h2 {
   font-size: xx-large;
-  color: #fdf0d5;
+  color: #5A647E;
 
   text-align: left;
   position: relative;
@@ -209,7 +257,7 @@
   text-align: left;
   position: relative;
   top: 3rem;
-  color: #fdf0d5;
+  color: #5A647E;
 
   /* margin-bottom: -1%; */
   letter-spacing: 0.15rem;
@@ -221,7 +269,7 @@
   text-align: left;
   position: relative;
   top: 3.8rem;
-  color: #ABB3BC;
+  color: #82878F;
   /* margin-bottom: -1%; */
   letter-spacing: 0.15rem;
 }
@@ -239,7 +287,7 @@
   text-align: left;
   position: relative;
   top: 3rem;
-  color: #fdf0d5;
+  color: #5A647E;
   /* margin-bottom: -1%; */
   letter-spacing: 0.15rem;
 }
@@ -253,7 +301,7 @@
   font-weight: 200;
   /* margin-bottom: -1%; */
   letter-spacing: 0.15rem;
-  color: #ABB3BC;
+  color: #82878F;
 
 }
 
@@ -277,22 +325,190 @@
   font-size: medium;
   letter-spacing: 0.15rem;
 
-  color: #fdf0d5;
+  color: #5A647E;
 
 }
 
 /* FOOTER ENDS */
 
+.IntroPage {
+
+  max-height: 90vh;
+  background-color: #F9F9FE;
+  overflow: hidden;
+  /* Hide any overflow beyond the container's height */
+  position: relative;
+  /* Adjust animation speed (10s) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@keyframes parallax {
+  0% {
+    transform: translateY(0);
+    /* Start at normal position */
+  }
+
+  50% {
+    transform: translateY(-30px);
+    /* Move the image up */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Back to normal position */
+  }
+}
+
+.IntroImg {
+  -webkit-animation: mover 10s infinite alternate;
+  animation: mover 2s infinite alternate;
+  /* display: block; */
+  /* margin: 0 auto; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 500px;
+  margin-top: -310px;
+  /* Half the height */
+  margin-left: -400px;
+  /* Half the width */
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.IntroPageDivImg {
+  position: absolute;
+  background-image: url("https://wordpress.iqonic.design/product/wp/xamin-elementor/wp-content/uploads/2020/06/bannershap.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* position: relative; */
+  animation: parallax 10s linear infinite;
+
+  z-index: 0;
+  height: 100%;
+  color: black;
+  /* border: 1px solid; */
+  /* margin: 0 auto; */
+  width: 100%;
+}
+
+.IntroPageDiv {
+  /* border: 2px solid black; */
+  /* margin: 0 auto; */
+  /* margin-top: 2em; */
+  padding: 50px;
+  /* position: relative; */
+  height: 40em;
+  position: relative;
+  top: 1em;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* z-index: 5; */
+  margin: 0 auto;
+}
+
+.IntroPageHeaders {
+  /* display: grid; */
+  color: black;
+  /* border: 1px solid; */
+  height: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  font-family: 'Raleway', sans-serif;
+  color: #253C5C;
+  font-weight: 1000;
+  font-size: 110px;
+
+}
+
+.IntroPageHeadersItem1 {
+  text-align: center;
+  /* border: 1px solid; */
+  display: flex;
+  /* height: 10em; */
+  flex: 1;
+  /* justify-self: center; */
+  /* border: 2px solid; */
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: none;
+
+}
+
+.IntroPageHeadersItem1 p {
+  text-align: center;
+  /* position: relative;
+  top: 0.6em;
+  left: 0.8em; */
+  z-index: none;
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.IntroPageHeadersItem2 {
+  /* border: 1px solid black; */
+
+  z-index: 1;
+  /* height: 10em; */
+
+  border-top: 3px solid #253C5C;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.IntroPageHeadersItem2 p {
+  text-align: center;
+  /* position: relative;
+  top: 1em;
+  right: 0.8em; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid; */
+}
 
 /* * CONTENT PART BEGINS */
 /* CONTENT-1 */
 
 .Content1Section {
   font-family: 'Poppins', sans-serif;
-  min-height: 90vh;
+  min-height: 110vh;
   /* margin: 2rem 0; */
-  background-color: #f1faee;
-  color: #1d3557;
+  background-color: #FFFFFF;
+  color: #535F81;
 }
 
 .Content1Section h2 {
@@ -300,8 +516,19 @@
   /* margin-top: 1em; */
   padding: 1.2em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  letter-spacing: 0.1em;
-  color: #e63946;
+  letter-spacing: 0.05em;
+  font-size: large;
+  color: #437EEB;
+  margin: 0 auto;
+  margin-bottom: 1em;
+
+}
+
+.Content1SectionHeader {
+  display: inline-block;
+  padding: 10px;
+  background: linear-gradient(to right, #F0F1FD, #F6F7FE, #FDFDFE);
+
 }
 
 .Content1Section .Content1Biography {
@@ -310,6 +537,8 @@
   display: flex;
   flex-direction: column;
   /* border: 3px solid black */
+  justify-content: center;
+  /* align-items: center; */
 }
 
 .Content1Section .Content1BiographyImg {
@@ -319,10 +548,41 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
+  color: #313E5B;
+}
+
+/* .Content1BiographyImg  */
+.Content1Button {
+  margin-top: 1em;
+  width: 150px;
+  height: 50px;
+  font-family: 'Poppins', sans-serif;
+  align-self: center;
+  background-color: #437EEB;
+  color: #FFF7FA;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  font-weight: 800;
+}
+
+.Content1Button:hover {
+  background-color: #2f62c0;
+
 }
 
 .Content1BiographyImg img {
   transition: 0.9s;
+  border-radius: 50%;
+  /* Create a circular shape */
+  height: 230px;
+  width: 230px;
+  object-fit: fill;
+  /* Maintain the aspect ratio and fill the circle */
+
+  box-shadow: 5px 10px 10px 2px rgb(0, 0, 0, 0.5);
+
 }
 
 .Content1BiographyImg img:hover {
@@ -337,30 +597,30 @@
   line-height: 1.5;
   text-align: center;
   padding: 1em 8em;
+  /* width: 500px; */
 }
 
 
 
 /* content-2 begins */
 .AlgorithmSection {
-  min-height: 95vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   /* justify-content: center;
   align-items: center; */
-  background-color: #52b69a;
-
-  background-color: #f1faee;
-  color: #1d3557;
+  background-color: #FFFFFF;
+  color: #535F81;
 
 }
 
 .AlgorithmSection h2 {
   text-align: center;
-  margin-top: 1em;
+  margin-top: 2em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  letter-spacing: 0.1em;
-  color: #e63946;
+  letter-spacing: 0.02em;
+  color: #437EEB;
+  font-size: large;
 
 }
 
@@ -372,7 +632,7 @@
 }
 
 .AlgorithmSectionVisual {
-  border-right: 2px solid black;
+  border-right: 1px solid #313E5B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,8 +650,9 @@
 /* CONTENT-3 */
 .ProblemSection {
   min-height: 140vh;
-  background-color: #f1faee;
-  color: #1d3557;
+  background-color: #FFFFFF;
+  color: #535F81;
+  ;
 }
 
 .ProblemSectionContain {
@@ -403,12 +664,14 @@
 }
 
 .ProblemSection .ProblemSectionh2 {
-  /* margin-top: 0.1em; */
+  margin-top: -2em;
+  margin-bottom: 1.2em;
+
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  letter-spacing: 0.1em;
-  color: #e63946;
-
+  letter-spacing: 0.02em;
+  color: #437EEB;
+  font-size: large;
 }
 
 .ProblemSectionh3 {
@@ -417,7 +680,7 @@
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 0.1em;
-  color: #1d3557
+  color: #313E5B;
 }
 
 .ProblemSectionh4 {
@@ -425,7 +688,7 @@
   margin-bottom: 0.5em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 0.1em;
-
+  color: #313E5B;
 }
 
 .ProblemSection p:nth-of-type(1) {
@@ -448,7 +711,7 @@
   width: 95%;
   margin: 0 auto;
   border: none;
-  border-top: 2px solid black;
+  border-top: 1px solid #313E5B;
 }
 
 .SolutionSection {
