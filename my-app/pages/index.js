@@ -4,13 +4,34 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Link } from "react-scroll";
 import { prims } from "./components/primsAlgo.mjs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [spanningTree, setSpanningTree] = useState([]);
+  const [latLong, setLatLong] = useState([]);
+
   useEffect(() => {
-    const res = prims();
-    console.log(res);
+    fetch("./api/spanningTreeAPI")
+      .then((response) => {
+        console.log("Response: ", response);
+        response.json();
+      })
+      .then((data) => {
+        console.log("Spanning tree: ", data);
+        setSpanningTree(data);
+      })
+      .catch((error) => console.error("Error fetching spanning tree: ", error));
+
+    // fetch("./components/longLat.json")
+    //   .then((response) => response.json())
+    //   .then((data) => setLatLong(data))
+    //   .catch((error) =>
+    //     console.error("Error fetching Latitude and Longitude data: ", error)
+    //   );
+
+    console.log(spanningTree);
+    console.log(latLong);
   }, []);
 
   const Navbar = () => {
@@ -306,6 +327,8 @@ export default function Home() {
       </>
     );
   };
+
+  const Section4 = () => {};
 
   const Footer = () => {
     return (
