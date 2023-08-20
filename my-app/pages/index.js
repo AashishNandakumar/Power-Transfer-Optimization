@@ -119,7 +119,7 @@ export default function Home() {
               </p>
               <br />
               <p>
-                Prim's method, often referred to as{" "}
+                Prim&apos;s method, often referred to as{" "}
                 <strong>Jarnk&apos;s algorithm</strong> in computer science, is
                 a greedy algorithm that locates a minimum spanning tree for a
                 weighted undirected graph. The overall weight of all the edges
