@@ -715,11 +715,13 @@
   border-top: 1px solid #313E5B;
 }
 
+
+/* BEGIN OF SOLUTION SECTION */
 .SolutionSection {
   margin-bottom: 6em;
-  min-height: 110vh;
+  /* min-height: 110vh; */
   width: 100%;
-  max-height: 120vh;
-
+  /* max-height: 120vh; */
+  height: 1200px;
   border: 2px solid black
 }

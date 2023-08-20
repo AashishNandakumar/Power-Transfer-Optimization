@@ -385,47 +385,15 @@ export default function Home() {
         <meta name="description" content="Power Transfer Optimization" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       <main className={styles.body}>
         <div className={styles.banner}>
           <div className={styles.banner1}>
             <div className={styles.banner11}>
-              <img
+              {/* <img
                 src="https://www.svgrepo.com/show/127575/location-sign.svg"
                 width="20px"
-              />
+              /> */}
               {"    "}
               Bangalore
             </div>
@@ -462,7 +430,10 @@ export default function Home() {
         <hr className={styles.HR} />
 
         <Content3 />
-        <div className={styles.SolutionSection}>{/* <Section4 /> */}</div>
+        <div className={styles.SolutionSection}>
+          {/* <Section4 /> */}
+          {/*  */}
+        </div>
         <Footer />
       </main>
     </>

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import L from "leaflet";
+import styles from "../styles/Mapi.module.css";
 import {
   MapContainer,
   TileLayer,
@@ -298,6 +300,20 @@ function Section4() {
     },
   ];
 
+  // // Define a custom marker icon
+  // const powerGridIcon = L.divIcon({
+  //   className: "power-grid-icon", // Define a CSS class for styling
+  //   html: `<div class="${styles["power-grid-icon"]}"></div>`, // Use string interpolation to include the CSS class
+  //   iconSize: [32, 32], // Set the size of the icon
+  // });
+
+  const customIcon = L.icon({
+    // Other icon options like iconUrl, iconSize, etc.
+    iconSize: [34, 34], // Set the size of the icon as needed
+    shadowSize: null, // Remove the shadow
+    iconUrl: "https://cdn-icons-png.flaticon.com/128/10214/10214070.png", // Provide the URL to your marker icon image
+  });
+
   useEffect(() => {
     const timer = setInterval(() => {
       if (currentIndex < minCostSpanningTree.vertices.length) {
@@ -327,14 +343,18 @@ function Section4() {
         clearInterval(timer);
       }
     }, 2000);
+
+    // Exit the timer after 1 minute
+    setTimeout(() => {
+      clearInterval(timer);
+    }, 60000); // 1 minute in milliseconds
   }, [currentIndex]);
 
   return (
     <MapContainer
-      center={[38.907132, -77.036546]}
-      width="800"
-      height="400"
-      zoom={12}
+      center={[15.137079772609734, 76.91002058872876]}
+      style={{ width: "100%", height: "100%" }}
+      zoom={7.5}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -343,7 +363,12 @@ function Section4() {
 
       {/* Add Markers for each vertex */}
       {visibleVertices.map((vertex, index) => (
-        <Marker key={index} position={[vertex.lat1, vertex.long1]}>
+        <Marker
+          key={index}
+          position={[vertex.lat1, vertex.long1]}
+          // className={styles["hide-marker-shadow"]}
+          icon={customIcon}
+        >
           <Popup>{`Vertex ${vertex.v1} - Vertex ${vertex.v2}, Weight: ${vertex.weight}`}</Popup>
         </Marker>
       ))}
@@ -356,7 +381,7 @@ function Section4() {
             [vertex.lat1, vertex.long1],
             [vertex.lat2, vertex.long2],
           ]}
-          color="blue"
+          color="cyan"
         />
       ))}
     </MapContainer>
