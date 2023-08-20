@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import L from "leaflet";
 import styles from "../styles/Mapi.module.css";
 import {
@@ -17,6 +17,10 @@ import {
 function Section4() {
   const [visibleVertices, setVisibleVertices] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const [animationState, setAnimationState] = useState("stopped");
+  const animationRef = useRef(null);
+
   const minCostSpanningTree = {
     vertices: [
       {
@@ -307,22 +311,37 @@ function Section4() {
   //   iconSize: [32, 32], // Set the size of the icon
   // });
 
+  const getVertexNameById = (id) => {
+    const vertex = latitudeLongitude.find((item) => item.id === id);
+    return vertex ? vertex.name : "";
+  };
+
   const customIcon = L.icon({
     // Other icon options like iconUrl, iconSize, etc.
-    iconSize: [34, 34], // Set the size of the icon as needed
+    iconSize: [52, 52], // Set the size of the icon as needed
     shadowSize: null, // Remove the shadow
-    iconUrl: "https://cdn-icons-png.flaticon.com/128/10214/10214070.png", // Provide the URL to your marker icon image
+    iconUrl: "https://cdn-icons-png.flaticon.com/128/10213/10213879.png", // Provide the URL to your marker icon image
   });
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (currentIndex < minCostSpanningTree.vertices.length) {
+    let totalWeight = visibleVertices.reduce(
+      (sum, vertex) => sum + vertex.weight,
+      0
+    );
+    // console.log("Total Weight of Minimum Cost Spanning Tree:", totalWeight);
+  }, [animationState]);
+
+  const startAnimation = () => {
+    if (
+      animationState === "stopped" &&
+      visibleVertices.length === 0 // Only start if no vertices are visible
+    ) {
+      setAnimationState("running");
+      let currentIndex = 0;
+      animationRef.current = setInterval(() => {
         const vertex = minCostSpanningTree.vertices[currentIndex];
         const v1Data = latitudeLongitude.find((item) => item.id === vertex.v1);
         const v2Data = latitudeLongitude.find((item) => item.id === vertex.v2);
-
-        // console.log(latitudeLongitude);
-        // console.log(minCostSpanningTree);
 
         if (v1Data && v2Data) {
           setVisibleVertices((prevState) => [
@@ -337,54 +356,67 @@ function Section4() {
               long2: v2Data.long,
             },
           ]);
-          setCurrentIndex(currentIndex + 1);
+          currentIndex++;
+        } else {
+          clearInterval(animationRef.current);
+          setAnimationState("stopped");
         }
-      } else {
-        clearInterval(timer);
-      }
-    }, 2000);
 
-    // Exit the timer after 1 minute
-    setTimeout(() => {
-      clearInterval(timer);
-    }, 60000); // 1 minute in milliseconds
-  }, [currentIndex]);
+        // Stop the animation when all vertices are shown
+        if (currentIndex >= minCostSpanningTree.vertices.length) {
+          clearInterval(animationRef.current);
+          setAnimationState("stopped");
+        }
+      }, 2000);
+    }
+  };
 
   return (
-    <MapContainer
-      center={[15.137079772609734, 76.91002058872876]}
-      style={{ width: "100%", height: "100%" }}
-      zoom={7.5}
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      />
-
-      {/* Add Markers for each vertex */}
-      {visibleVertices.map((vertex, index) => (
-        <Marker
-          key={index}
-          position={[vertex.lat1, vertex.long1]}
-          // className={styles["hide-marker-shadow"]}
-          icon={customIcon}
-        >
-          <Popup>{`Vertex ${vertex.v1} - Vertex ${vertex.v2}, Weight: ${vertex.weight}`}</Popup>
-        </Marker>
-      ))}
-
-      {/* Add Polyline connecting vertices */}
-      {visibleVertices.map((vertex, index) => (
-        <Polyline
-          key={index}
-          positions={[
-            [vertex.lat1, vertex.long1],
-            [vertex.lat2, vertex.long2],
-          ]}
-          color="cyan"
+    <>
+      <MapContainer
+        center={[15.137079772609734, 76.91002058872876]}
+        style={{ width: "100%", height: "100%" }}
+        zoom={8}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-      ))}
-    </MapContainer>
+
+        {/* Add Markers for each vertex */}
+        {visibleVertices.map((vertex, index) => (
+          <Marker
+            key={index}
+            position={[vertex.lat1, vertex.long1]}
+            icon={customIcon}
+          >
+            <Popup>{`${getVertexNameById(vertex.v1)} -> ${getVertexNameById(
+              vertex.v2
+            )}, Distance: ${vertex.weight} kms`}</Popup>
+          </Marker>
+        ))}
+
+        {/* Add Polyline connecting vertices */}
+        {visibleVertices.map((vertex, index) => (
+          <Polyline
+            key={index}
+            positions={[
+              [vertex.lat1, vertex.long1],
+              [vertex.lat2, vertex.long2],
+            ]}
+            color="#d92981"
+          />
+        ))}
+      </MapContainer>
+
+      <div className={styles.buttonDiv}>
+        {animationState === "stopped" && (
+          <button className={styles.buttonStart} onClick={startAnimation}>
+            Start
+          </button>
+        )}
+      </div>
+    </>
   );
 }
 

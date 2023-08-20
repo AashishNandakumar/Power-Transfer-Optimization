@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Link } from "react-scroll";
 import dynamic from "next/dynamic";
-
+import DistanceAnimation from "@/components/distanceAnim.js";
 const Section4 = dynamic(() => import("../components/map.js"), {
   ssr: false,
 });
@@ -52,21 +52,21 @@ export default function Home() {
               </Link>
               <Link
                 id={styles.anchor}
-                to="CONTRIBUTORS"
+                to="SOLN"
                 smooth={true}
                 duration={900}
                 offset={-50}
               >
-                CONTRIBUTORS
+                SOLUTION
               </Link>
               <Link
                 id={styles.anchor}
-                to="CONTACT"
+                to="ANALYSIS"
                 smooth={true}
                 duration={1500}
                 offset={-50}
               >
-                CONTACT US
+                ANALYSIS
               </Link>
             </div>
           </div>
@@ -309,13 +309,112 @@ export default function Home() {
             </p>
             <br />
             <br />
-            <h3 className={styles.ProblemSectionh3}>
-              Generating a Minimum Cost Spanning Tree
-            </h3>
+
             {/* Use backend here */}
           </div>
         </section>
       </>
+    );
+  };
+
+  const Content4 = () => {
+    return (
+      <section className={styles.SolutionSection1} id="SOLN">
+        <h2 className={styles.ProblemSectionh3}>
+          <span className={styles.Content1SectionHeader}>
+            GENERATING A MINIMUM SPANNING TREE
+          </span>
+        </h2>
+        <div className={styles.SolutionSection}>
+          <Section4 />
+          {/*  */}
+        </div>
+      </section>
+    );
+  };
+
+  const Content5 = () => {
+    return (
+      <section className={styles.ConclusionSection} id="ANALYSIS">
+        <h2 className={styles.ProblemSectionh3}>
+          <span className={styles.Content1SectionHeader}>ANALYSIS</span>
+        </h2>
+        {/* <h3>Total Distance covered(kms): 1507.30</h3>
+         */}
+        {/* <DistanceAnimation /> */}
+
+        <div className={styles.ConclusionSectionContainer}>
+          <div className={styles.ConclusionSectionCard}>
+            <div className={styles.ConclusionSectionCardImg}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/3710/3710274.png"
+                width="80px"
+              />
+            </div>
+            <div className={styles.ConclusionSectionCardInfo}>
+              <h3>Reduced distance</h3>
+              <p>
+                What sets this journey apart is the dedication to efficiency. By
+                finding optimized routes, it managed to save hundreds of
+                kilometers, emphasizing the commitment to resource conservation
+                and sustainability.
+              </p>
+            </div>
+          </div>
+          <div className={styles.ConclusionSectionCard}>
+            <div className={styles.ConclusionSectionCardImg}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/639/639365.png"
+                width="80px"
+              />
+            </div>
+            <div className={styles.ConclusionSectionCardInfo}>
+              <h3>Saving crores of rupees in R&D</h3>
+              <p>
+                {" "}
+                Beyond its environmental impact, the optimization efforts
+                translated into significant financial savings. It conservatively
+                saved crores of rupees in design and development costs, showing
+                the economic benefits of such strategic planning.
+              </p>
+            </div>
+          </div>
+          <div className={styles.ConclusionSectionCard}>
+            <div className={styles.ConclusionSectionCardImg}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/7071/7071818.png"
+                width="80px"
+              />
+            </div>
+            <div className={styles.ConclusionSectionCardInfo}>
+              <h3>More efficient Power transmission</h3>
+              <p>
+                This remarkable journey isn't just about the distance but about
+                building a more efficient power transmission system. It
+                showcases the potential for greater energy efficiency and
+                reduced losses in the future.
+              </p>
+            </div>
+          </div>
+          <div className={styles.ConclusionSectionCard}>
+            <div className={styles.ConclusionSectionCardImg}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/9781/9781304.png"
+                width="80px"
+              />
+            </div>
+            <div className={styles.ConclusionSectionCardInfo}>
+              <h3>Reduced Man-power</h3>
+              <p>
+                By implementing intelligent algorithms and technologies, the
+                project has effectively reduced the demand for human resources.
+                This not only enhances efficiency but also highlights the
+                potential of automation in large-scale infrastructure projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   };
 
@@ -366,10 +465,10 @@ export default function Home() {
             /> */}
             <div className={styles.IntroPageHeaders}>
               <div className={styles.IntroPageHeadersItem1}>
-                <p>PRIMS</p>
+                <p>POWER GRID</p>
               </div>
               <div className={styles.IntroPageHeadersItem2}>
-                <p>ALGORITHM</p>
+                <p>OPTIMIZATION</p>
               </div>
             </div>
           </div>
@@ -430,10 +529,13 @@ export default function Home() {
         <hr className={styles.HR} />
 
         <Content3 />
-        <div className={styles.SolutionSection}>
-          {/* <Section4 /> */}
-          {/*  */}
-        </div>
+        <hr className={styles.HR} />
+
+        <Content4 />
+        <hr className={styles.HR} />
+        <Content5 />
+        <hr className={styles.HR} />
+
         <Footer />
       </main>
     </>
