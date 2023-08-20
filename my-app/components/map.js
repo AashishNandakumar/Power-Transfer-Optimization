@@ -323,13 +323,13 @@ function Section4() {
     iconUrl: "https://cdn-icons-png.flaticon.com/128/10213/10213879.png", // Provide the URL to your marker icon image
   });
 
-  useEffect(() => {
-    let totalWeight = visibleVertices.reduce(
-      (sum, vertex) => sum + vertex.weight,
-      0
-    );
-    // console.log("Total Weight of Minimum Cost Spanning Tree:", totalWeight);
-  }, [animationState]);
+  // useEffect(() => {
+  //   let totalWeight = visibleVertices.reduce(
+  //     (sum, vertex) => sum + vertex.weight,
+  //     0
+  //   );
+  //   // console.log("Total Weight of Minimum Cost Spanning Tree:", totalWeight);
+  // }, [animationState]);
 
   const startAnimation = () => {
     if (
