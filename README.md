@@ -1,5 +1,8 @@
 # Power Transmission Network Optimization
 
+![Screenshot 2023-08-20 160727](https://github.com/AashishNandakumar/Power-Transfer-Optimization/assets/98106129/3dc2ca4f-c9b0-49cd-8f4c-9bac62e47a2a)
+
+
 ## Overview
 
 Power Transmission Network Optimization is a project aimed at optimizing the electrical power transmission network to reduce costs, improve efficiency, and enhance overall performance. By applying cutting-edge algorithms and geographical data, this project offers innovative solutions to the challenges faced by the power transmission industry.
@@ -29,6 +32,9 @@ Power Transmission Network Optimization is a project aimed at optimizing the ele
 - **Reduced Manpower**: The automated system minimizes the need for manual intervention, reducing manpower requirements.
 
 - **More Efficient Power Transmission**: The optimized network ensures that power is transmitted more efficiently, reducing losses.
+
+![Screenshot 2023-08-20 160823](https://github.com/AashishNandakumar/Power-Transfer-Optimization/assets/98106129/13039165-61d2-4c29-bde7-76431c4d5f48)
+
 
 ## Getting Started
 
