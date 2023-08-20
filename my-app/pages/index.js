@@ -405,10 +405,10 @@ export default function Home() {
             <div className={styles.ConclusionSectionCardInfo}>
               <h3>Reduced Man-power</h3>
               <p>
-                By implementing intelligent algorithms and technologies, the
-                project has effectively reduced the demand for human resources.
-                This not only enhances efficiency but also highlights the
-                potential of automation in large-scale infrastructure projects.
+                By implementing intelligent algorithms, the project has
+                effectively reduced the demand for human resources. This not
+                only enhances efficiency but also highlights the potential of
+                automation in large-scale infrastructure projects.
               </p>
             </div>
           </div>
