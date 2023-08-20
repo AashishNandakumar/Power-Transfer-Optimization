@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Link } from "react-scroll";
 import dynamic from "next/dynamic";
-import DistanceAnimation from "@/components/distanceAnim.js";
 const Section4 = dynamic(() => import("../components/map.js"), {
   ssr: false,
 });
@@ -116,13 +115,13 @@ export default function Home() {
                 <strong>Edsger W. Dijkstra</strong> rediscovered and republished
                 the algorithm in 1957 and 1959, respectively. As a result, it is
                 also known as the DJP algorithm, Prim-Jarnak algorithm,
-                Prim-Dijkstra algorithm, and Jarnak's algorithm.
+                Prim-Dijkstra algorithm, and Jarnak&apos;s algorithm.
               </p>
               <br />
               <p>
                 Prim's method, often referred to as{" "}
-                <strong>Jarnk's algorithm</strong> in computer science, is a
-                greedy algorithm that locates a minimum spanning tree for a
+                <strong>Jarnk&apos;s algorithm</strong> in computer science, is
+                a greedy algorithm that locates a minimum spanning tree for a
                 weighted undirected graph. The overall weight of all the edges
                 in the tree is reduced, and as a result, it discovers a subset
                 of the edges that creates a tree with every vertex. The
@@ -201,8 +200,8 @@ export default function Home() {
               Distribution
             </h3>
             <p>
-              In today's modern world, reliable and efficient distribution of
-              electrical energy is essential for sustaining societies,
+              In today&apos;s modern world, reliable and efficient distribution
+              of electrical energy is essential for sustaining societies,
               industries, and economies. The state of Karnataka, located in
               India, serves as a backdrop for a challenging problem in the field
               of energy infrastructure optimization. Your task is to develop a
@@ -229,7 +228,7 @@ export default function Home() {
                 lines connecting them.
               </li>
               <li className={styles.ProblemSectionli}>
-                <strong>Minimum Spanning Tree (MST):</strong> Apply Prim's
+                <strong>Minimum Spanning Tree (MST):</strong> Apply Prim&apos;s
                 algorithm to generate a Minimum Spanning Tree (MST) that spans
                 across the entire power grid network. The MST should represent
                 the optimal network connections required to efficiently transmit
@@ -259,7 +258,7 @@ export default function Home() {
             </ol>
             <br />
             <h4 className={styles.ProblemSectionh4}>
-              Project Focus: Optimizing 400Kv Lines Using Prim's Algorithm{" "}
+              Project Focus: Optimizing 400Kv Lines Using Prim&apos;s Algorithm{" "}
             </h4>
             <p>
               As part of the broader endeavor to optimize the power grid
@@ -271,9 +270,9 @@ export default function Home() {
               </strong>
               The intricate network of these high-voltage lines serves as the
               backbone of energy transmission across the state. Our challenge
-              involves implementing Prim's algorithm to identify the optimal
-              connections and routes among these 400Kv lines, ensuring the
-              establishment of a Minimum Spanning Tree (MST) that minimizes
+              involves implementing Prim&apos;s algorithm to identify the
+              optimal connections and routes among these 400Kv lines, ensuring
+              the establishment of a Minimum Spanning Tree (MST) that minimizes
               transmission costs while maximizing the reliability of energy
               distribution. By focusing on these critical 400Kv lines, Our
               project aims to uncover opportunities for{" "}
@@ -389,8 +388,8 @@ export default function Home() {
             <div className={styles.ConclusionSectionCardInfo}>
               <h3>More efficient Power transmission</h3>
               <p>
-                This remarkable journey isn't just about the distance but about
-                building a more efficient power transmission system. It
+                This remarkable journey isn&apos;t just about the distance but
+                about building a more efficient power transmission system. It
                 showcases the potential for greater energy efficiency and
                 reduced losses in the future.
               </p>
