@@ -565,6 +565,7 @@
   cursor: pointer;
   transition: 1s;
   font-weight: 800;
+  margin-bottom: 2em;
 }
 
 .Content1Button:hover {
