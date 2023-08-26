@@ -33,8 +33,7 @@ Power Transmission Network Optimization is a project aimed at optimizing the ele
 
 - **More Efficient Power Transmission**: The optimized network ensures that power is transmitted more efficiently, reducing losses.
 
-![Screenshot 2023-08-20 160823](https://github.com/AashishNandakumar/Power-Transfer-Optimization/assets/98106129/c72327ad-780c-4e6e-ae4a-98065b352887)
-
+![updatedPowerGridMap](https://github.com/AashishNandakumar/Power-Transfer-Optimization/assets/98106129/16271bcc-847e-45c8-b6d0-0e666b28a1f6)
 
 ## Getting Started
 
