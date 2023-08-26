@@ -2,11 +2,17 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Link } from "react-scroll";
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
 const Section4 = dynamic(() => import("../components/map.js"), {
   ssr: false,
 });
+import { prims } from "@/components/primsAlgo.js";
 
 export default function Home() {
+  useEffect(() => {
+    prims();
+  }, []);
+
   const Navbar = () => {
     return (
       <>

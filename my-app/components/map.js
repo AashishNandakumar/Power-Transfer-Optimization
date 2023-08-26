@@ -34,24 +34,24 @@ function Section4() {
         weight: 8.4,
       },
       {
+        v1: 26,
+        v2: 2,
+        weight: 146,
+      },
+      {
+        v1: 27,
+        v2: 26,
+        weight: 124,
+      },
+      {
         v1: 4,
         v2: 1,
         weight: 178,
       },
       {
-        v1: 8,
-        v2: 4,
-        weight: 44.5,
-      },
-      {
         v1: 6,
-        v2: 8,
-        weight: 21,
-      },
-      {
-        v1: 7,
-        v2: 6,
-        weight: 44.2,
+        v2: 4,
+        weight: 64.5,
       },
       {
         v1: 5,
@@ -64,14 +64,24 @@ function Section4() {
         weight: 108,
       },
       {
-        v1: 10,
+        v1: 8,
         v2: 5,
-        weight: 119,
+        weight: 113,
+      },
+      {
+        v1: 10,
+        v2: 8,
+        weight: 19.1,
+      },
+      {
+        v1: 7,
+        v2: 10,
+        weight: 53.7,
       },
       {
         v1: 13,
-        v2: 10,
-        weight: 60.3,
+        v2: 7,
+        weight: 42.3,
       },
       {
         v1: 12,
@@ -134,6 +144,11 @@ function Section4() {
         weight: 53.2,
       },
       {
+        v1: 31,
+        v2: 22,
+        weight: 60.7,
+      },
+      {
         v1: 24,
         v2: 17,
         weight: 91.4,
@@ -144,9 +159,24 @@ function Section4() {
         weight: 92.9,
       },
       {
+        v1: 30,
+        v2: 16,
+        weight: 46.7,
+      },
+      {
         v1: 9,
         v2: 3,
         weight: 136,
+      },
+      {
+        v1: 28,
+        v2: 8,
+        weight: 137,
+      },
+      {
+        v1: 29,
+        v2: 30,
+        weight: 176,
       },
     ],
   };
@@ -190,15 +220,15 @@ function Section4() {
     },
     {
       id: 7,
-      name: "Lagalur",
-      lat: 15.63140041329996,
-      long: 76.06975748455768,
+      name: "Jagalur",
+      lat: 14.519945806534292,
+      long: 76.337728358308,
     },
     {
       id: 8,
-      name: "KEB Hosapete",
-      lat: 15.271797634730166,
-      long: 76.3861089849446,
+      name: "Harihar",
+      lat: 14.519204534933772,
+      long: 75.80126760388853,
     },
     {
       id: 9,
@@ -301,6 +331,42 @@ function Section4() {
       name: "Somannahali",
       lat: 12.784177217806327,
       long: 77.50712587961809,
+    },
+    {
+      id: 26,
+      name: "Gulbarga",
+      lat: 17.33815655256924,
+      long: 76.83570336281481,
+    },
+    {
+      id: 27,
+      name: "Kudagi",
+      lat: 17.172589919220922,
+      long: 75.82269464832945,
+    },
+    {
+      id: 28,
+      name: "Talaguppa",
+      lat: 14.215084510380908,
+      long: 74.90534165696621,
+    },
+    {
+      id: 29,
+      name: "Nandikur",
+      lat: 13.13980903697847,
+      long: 74.80176119098982,
+    },
+    {
+      id: 30,
+      name: "Hebanahalli",
+      lat: 12.991756074382769,
+      long: 75.84979820640842,
+    },
+    {
+      id: 31,
+      name: "Sugaturu",
+      lat: 13.209886671422357,
+      long: 78.09963942105632,
     },
   ];
 

@@ -2,7 +2,7 @@ import { powerGridMap } from "./powerGridData";
 // const fs = require("fs");
 
 export function prims() {
-  const noOfVertex = 26;
+  const noOfVertex = 32;
   let I = Infinity,
     i,
     j,
